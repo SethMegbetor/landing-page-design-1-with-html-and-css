@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap");
+
+:root {
+  --color-primary: orange;
+  --color-secondary: orange;
+  --color-tertiary: #f999fe;
+  --color-light: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 86%;
+  margin: 0 auto;
+}
+
+a {
+  color: var(--color-light);
+  font-size: 0.9rem;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: url("../img/bg-img.jpg") no-repeat center center/cover;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  /* color: #3a0070; */
+}
+
+/* code for navbar */
+nav {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 1.5rem 0;
+}
+
+nav .container img {
+  width: 4.2rem;
+}
+
+nav .container ul {
+  display: flex;
+  gap: 4rem;
+}
+
+nav .container ul li {
+  list-style: none;
+}
+
+nav a:hover {
+  color: var(--color-tertiary);
+}
+
+/* code for the header section */
+section {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100%;
+  position: relative;
+  top: 3rem;
+  left: 0;
+  text-align: center;
+  color: var(--color-light);
+}
+
+section .container h1 {
+  font-size: 6rem;
+  font-family: "Lobster", cursive;
+}
+
+section .container h3 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  font-family: "Lobster", cursive;
+}
+
+section .container p {
+  letter-spacing: 0.06rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  font-weight: 300;
+  max-width: 40rem;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+
+section .container a {
+  background: linear-gradient(
+    to right,
+    var(--color-secondary),
+    var(--color-primary)
+  );
+  padding: 0.7rem 3rem;
+  margin: 0.4rem;
+  border-radius: 2rem;
+  position: relative;
+}
+
+section .container a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -0.5rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  border-left: 5px solid var(--color-primary);
+}
+
+section .container a:hover {
+  background: linear-gradient(
+    to left,
+    var(--color-secondary),
+    var(--color-primary)
+  );
+}
